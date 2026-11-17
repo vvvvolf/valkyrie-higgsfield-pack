@@ -2,12 +2,13 @@
 
 > **Public Read-Only Pack for GPT / Higgsfield** — 所有文件与图片均已开放公开 Raw 直链，无任何权限拦截。
 
-## 核心文档直链（给 GPT 读取）
-- **全套剧本 + 20 段 Seedance 2.5 提示词 + 4 维质感精修 Prompt**：
-  - GitHub 预览: https://github.com/vvvvolf/valkyrie-higgsfield-pack/blob/main/DutyFree_Valkyrie_10m_Remaster_Script_and_Prompts.md
+## 核心文档直链（推荐优先使用 V3 精修版）
+- **V3 专业制作精修版（含 V3.1–V3.7 摄影/质感/单镜头拆分/连续性补丁 + 20 段总控剧本）**：
+  - GitHub 预览: https://github.com/vvvvolf/valkyrie-higgsfield-pack/blob/main/V3_MASTER_SCRIPT_AND_PROMPTS.md
+  - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/V3_MASTER_SCRIPT_AND_PROMPTS.md
+- **V2 原始备份版**：
   - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/DutyFree_Valkyrie_10m_Remaster_Script_and_Prompts.md
 - **GPT `@` 标签与图片资产映射表**：
-  - GitHub 预览: https://github.com/vvvvolf/valkyrie-higgsfield-pack/blob/main/ASSET_INDEX_FOR_GPT.md
   - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/ASSET_INDEX_FOR_GPT.md
 
 ## 图片资产（`assets/`）
