@@ -3,9 +3,9 @@
 
 ---
 
-# V3 专业制作修订层（优先级高于下方 V2 原始提示词）
+# V3 专业制作统一总控版（已将 V3.1–V3.7 修订全部并入正文）
 
-> **使用规则**：本文件保留 V2 全部剧情、对白、镜头内容与资产标签；本节是 V3 的制作级修订。凡与下方 V2 原文冲突处，以本节为准。没有列出的剧情、台词、人物造型与段落时长保持不变。V3 不改变 20 个 Master Block + 10 张 Card 的总体结构。
+> **使用说明**：本文件为已合并所有 V3 修订的统一总控剧本与提示词。如需直接向 Higgsfield / Seedance 2.5 逐镜投喂，请配合 **[`V3_ATOMIC_SHOTS_88_EXECUTION_TABLE.md`](./V3_ATOMIC_SHOTS_88_EXECUTION_TABLE.md)**（已拆分为 **97 个 ≤120 词独立原子短镜头**，总长精确 `569.0s` + `46.0s` 字卡 = `615.0s / 10:15`）。
 
 ## V3.1 审核结论与修订目标
 
@@ -146,36 +146,9 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 - 声音分三层：现场环境底噪、动作拟音、对白/耳机声。Seedance 单次生成若出现对白串音，改为后期录制/配音；所有耳机台词均标记为 off-screen，不依赖人物口型。
 - 电影颗粒最后添加；不要在每一镜都叠加过重颗粒导致不同镜头噪点尺寸不一致。
 
-## V3.7 更新后的交付前 Gate
-
-- [ ] 统一采用全画幅对角 FOV 表；不再出现 14mm/94°、18mm/84°、16mm/88° 等错配。
-- [ ] 日景/黄昏/地下场景按 250D/500T 风格分别处理，不把胶片型号当作精确生成参数。
-- [ ] 角色精修不改变身份、服装剪裁、配色与构图；不声称由 2D 提示词生成真实 3D/PBR 贴图。
-- [ ] 20 个 Master Block 已拆成独立短镜头，复杂动作拆分并有首帧/尾帧约束。
-- [ ] 激光 15° → 2mm → +2.0mm 检测状态连续。
-- [ ] 淀粉与蓝染料残留在 Block 11 有来源，在 Block 15/16/Card 09 有一致证据名称。
-- [ ] 羽毛由袋口进入空域，悬浮由气流减弱与静电效果呈现，不宣称真实零重力。
-- [ ] Block 14 怀表、Block 15 时长、Block 16 “Twelve seconds”匹配。
-- [ ] Block 20 以海报切黑结束，Card 10 是唯一完整纯蓝片尾卡。
-- [ ] 角色名统一 Margaux；Chloé 左脚鞋状态、Jinx 狗只数量、三人次日换装连续。
-- [ ] 所有 UI、字幕、新闻标题在后期排版并逐字校对。
-- [ ] 逐张检查 23 张原始资产的身份/服装/场景一致性；未完成目视检查前不得标记资产审核“通过”。
-
----
-
-## 附：V3 修改记录
-
-- 修正镜头 FOV 的焦段映射和口径定义。
-- 将统一 500T 改为按日景/黄昏/低照度分场景的胶片观感参考。
-- 将“3D 贴图式精修”改为可执行的 2D 表面材质/光照外观精修。
-- 增加单镜头拆分生成规范与可复制镜头模板。
-- 补齐激光偏移、粉末残留、羽毛悬浮、倒计时、角色鞋履/狗只/换装连续性。
-- 统一全息 UI 术语，避免将质量差值误写成重力测量。
-- 去除 Block 20 与 Card 10 的重复纯蓝片尾。
-
 > **Duty-Free Valkyrie: Klein Blue Offside (10m15s / 615s Remastered Director's Cut · V3 Production-Ready Revision)**
 > 深度融合 **Higgsfield Seedance 2.5 实战工作流（`4段视频提示词.docx`）** + **`flowtube-studio` 资产/光学/表演/武戏/调色规范**，将全片重整为 **20 个「26–30 秒多镜硬切大师序列（Master Blocks）」+ 10 张高节奏 Risograph/盖·里奇风包装字卡**，总时长精准锁定 **615 秒（10 分 15 秒）**。
-> **本版新增**：① 开拍前「3D 贴图式 4 维去塑料质感精修 + 视频角色卡」Prompt；② Act II `Block 06–08` 全面升级为真 `Combat Skill` 近身攻防（静止蓄势 → `0.25s` 直线打击 → `85mm` 接触形变 Match-cut → 腾空视线提前转靶）；③ 全 20 段补齐 `Kodak Vision3 500T` 风格前缀、精确光学 FOV 度数、皮肤/面料/定向动态模糊画质模块。
+> **本版新增**：① 开拍前「电影级表面材质与光照外观精修 + 视频角色卡」Prompt（及 `char_buyer` / `char_heinrich` / `char_raven` 独立裁剪资产）；② Act II `Block 06–08` 升级为真 `Combat Skill` 近身攻防；③ 全片按日景（`250D`）/黄昏与地下（`500T`）分场景光学与全画幅对角 FOV 口径；④ 配套 `97` 镜原子拆分表 `V3_ATOMIC_SHOTS_88_EXECUTION_TABLE.md`。
 
 ---
 
@@ -185,26 +158,22 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 | :--- | :--- | :--- | :--- | :--- |
 | **开场 + Act I** | `00:00 – 02:11` | `131.5s` | `Card 01–04` (`13.5s`) + `Block 01–04` (`118s`) | 圣马可破封：生蚝滑铲 `0.25s` 撞飞克洛伊 → 蓝方块泄气 → 瓦伦蒂娜顺手牵羊 → 玛格特爆闪坠坞 |
 | **Act II** | `02:11 – 04:51` | `160.0s` | `Card 05–07` (`14.0s`) + `Block 05–09` (`146s`) | 红蓝船坞追逐与近身攻防：金克丝接球 → 集装箱 1v2 错峰腾空反击 → 横移长镜接伊莲娜 1v1 踢腕夺位 → 侧翻磕歪激光 15° → 死胡同互呛与电击棒通牒 |
-| **Act III** | `04:51 – 07:16` | `145.5s` | `Card 08` (`5.5s`) + `Block 10–14` (`140s`) | 死胡同造假手术台：1962 香水 + 韩国海盐薯片氮气 + 柏林蓝染发粉 + 焊枪余 2mm → 飘落白鸽羽毛 → 降入地下五层 |
-| **Act IV** | `07:16 – 09:17` | `121.0s` | `Card 09` (`8.0s`) + `Block 15–18` (`113s`) | 哥特棋盘审讯：光谱仪红警 → 伊莲娜牛津腔洛伦兹力反杀 → 黑鸦遮挡换轴线 → 白鸽羽毛静电悬浮 `0.000g` 放款 8000 万欧 |
-| **Epilogue** | `09:17 – 10:15` | `57.0s` | `Card 10` (`5.0s`) + `Block 19–20` (`52s`) | 船坞香槟狂欢 + FT 头版误读 → 免税大道三人听耳机闭嘴行进 → 3D 坍缩 2D 丝网印 → 3.5 欧薯片定格切纯蓝黑屏 |
+| **Act III** | `04:51 – 07:16` | `145.5s` | `Card 08` (`5.5s`) + `Block 10–14` (`140s`) | 死胡同造假手术台：1962 香水 + 韩国海盐薯片氮气 + 柏林钴蓝染发粉 + 焊枪余 2mm → 飘落白鸽羽毛 → 降入地下五层 |
+| **Act IV** | `07:16 – 09:17` | `121.0s` | `Card 09` (`8.0s`) + `Block 15–18` (`113s`) | 哥特棋盘审讯：光谱仪红警 → 伊莲娜牛津腔洛伦兹力反杀 → 黑鸦遮挡换轴线 → 白鸽羽毛微流静电悬浮 `0.000 g` 放款 8000 万欧 |
+| **Epilogue** | `09:17 – 10:15` | `57.0s` | `Card 10` (`5.0s`) + `Block 19–20` (`52s`) | 船坞香槟狂欢 + 《Venice Ledger》头版误读 → 免税大道三人听耳机闭嘴行进 → 3D 坍缩 2D 丝网印定格切黑（接 Card 10 纯蓝片尾） |
 | **总计** | **`00:00 – 10:15`** | **`615.0s`** | **20 Blocks (`569s`) + 10 Cards (`46s`)** | **10 分 15 秒标准十分钟出头电影感节奏** |
 
 ---
 
-## 二、开拍前必跑：3D 贴图式去塑料质感精修 + 视频角色卡规范
+## 二、开拍前必跑：电影级表面材质与光照外观精修 + 视频角色卡规范
 
 > 遵循教程铁律：**在锁定所有角色、面料、皮肤与道具物理质感前，不要直接拍正片。**
 
-### 1. 主角「去塑料感」4 维质感精修 Prompt（用于把 `assets/char_*.png` 升级为电影级皮肤与面料质感）
+### 1. 主角「电影级表面材质与光照外观精修」Prompt（用于把 `assets/char_*.png` 升级为电影级皮肤与面料质感）
+> 完整规范见上方 **V3.3**；不得改变人物身份、服装剪裁、配色与构图。审判庭三人图已额外拆分为 `char_buyer.png`、`char_heinrich.png`、`char_raven.png` 避免串脸。
 ```text
-[Texture Polish Prompt — 投喂对应 @char_* 图片]
-摄影指导风格：Roger Deakins，ARRI ALEXA Mini LF + Cooke S4i 50mm（47° FOV），Kodak Vision3 500T 胶片颗粒。
-保持原图人物五官、服装剪裁与 HEX 色值 100% 不变，仅进行 3D 贴图级表面精修，彻底去除 AI 磨皮与塑料反光：
-1) 皮肤纹理：还原真实皮肤毛孔、鼻翼与颧骨微细绒毛、自然轻微肤色不均与眼下微影，绝不出现蜡像/硅胶光滑感；
-2) 发丝质感：根根分明的自然发丝与碎发边缘（金克丝脏辫需呈现粗糙纤维捻线与轻微毛躁）；
-3) 面料物理：伊莲娜呈现重磅真丝细密斜纹光泽与重力垂坠褶皱；瓦伦蒂娜呈现高光泽硬质芭比粉漆皮的锐利环境高光折痕；克洛伊呈现厚实棉质粉白格纹斜纹布；玛格特呈现粗花呢毛呢纤维；
-4) 背景处理：保持平整无缝冷浅灰摄影棚幕布，无多余阴影或杂物。
+[Photoreal Surface & Lighting Polish — 投喂对应 @char_* 图片]
+Preserve the exact identity, facial proportions, expression, hairstyle silhouette, costume design, seams, accessories, pose, framing and original color palette. Improve only the visible photographic surface rendering: natural pore variation and fine vellus hair; subtle subsurface skin scattering without waxy highlights; realistic eye moisture and restrained specular reflections; individual hair strands with believable flyaways; fabric weave, seam stitching, fiber variation, weight and gravity-driven folds; physically plausible leather/paint reflections with roughness variation and controlled highlight roll-off. Keep shadow detail and natural color separation, plus restrained film grain. No beauty retouching, no silicone/plastic sheen, no costume changes, no background redesign.
 ```
 
 ### 2. 视频角色卡生成 Prompt（先生成 4 秒 `@char_elena_video_v1` 等动态角色卡）
@@ -235,14 +204,14 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 | **Card 06** | Block 05 后 | `5.0s` | 左右分屏双人定格卡：`MARGAUX (FT LEICA M3)` × `JINX (2M KLEIN BRAIDS)`。 |
 | **Card 07** | Block 09 后 | `3.5s` | ACT III 黑底蓝框卡：`DEAD-END COUNTERFEIT SURGERY | VAULT LOCK: 02:00`。 |
 | **Card 08** | Block 10 后 | `5.5s` | 三联原料节奏卡（`0.0s / 1.8s / 3.6s`）：`1962 TURPENTINE` + `KOREAN SEA SALT` + `BERLIN HAIR DYE`。 |
-| **Card 09** | Block 15 后 | `8.0s` | 光谱仪 UI 卡：前 `2.2s` 绿波扫描，后 `5.8s` 转猩红警报 `WARNING: STARCH + GERMAN COBALT + LASER OFFSET +2.0mm`。 |
+| **Card 09** | Block 15 后 | `8.0s` | 光谱仪 UI 卡：前 `2.2s` 绿波扫描，后 `5.8s` 转猩红警报 `WARNING: STARCH TRACE + BLUE DYE RESIDUE + LASER OFFSET +2.0mm`。 |
 | **Card 10** | Block 20 后 | `5.0s` | `#002FA7` 纯蓝片尾卡：`€80,000,000 WIRE RELEASED | SEA-SALT CRISPS: €3.50 (NO RECEIPT)`，第 `3.8s` 硬切纯黑。 |
 
 ---
 
 ## 四、全片 20 段 Higgsfield Seedance 2.5 完整提示词（615s 总控台账）
 
-> **统一格式**：全部包含 **风格前缀（`Kodak Vision3 500T` 变形宽银幕 `2.39:1`）+ 精确光学 FOV + 逐秒硬切 + 物理与质感细节 + `无旁白无音乐` 分轨音频 + 正面约束**。
+> **统一格式**：日景（`Block 01–08, 19–20`）采用 **Vision3 250D 日景观感**，黄昏与地下（`Block 09–18`）采用 **Vision3 500T 低照度观感**，全部采用 **全画幅对角 FOV + 逐秒硬切 + 物理质感 + `无旁白无音乐` 分轨音频 + 正面约束**。单镜投喂请直接使用 [`V3_ATOMIC_SHOTS_88_EXECUTION_TABLE.md`](./V3_ATOMIC_SHOTS_88_EXECUTION_TABLE.md)。
 
 ---
 
@@ -251,7 +220,7 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 01｜神明降临仰拍 & 袋内密闭蓝方块透视（`30s · 5 镜硬切` · 原 S01–S02）
 
 ```text
-[风格前缀] Kodak Vision3 500T 胶片质感，2.39:1 变形宽银幕（水平微弱蓝光斑），180 度快门真实物理速度，绝无慢动作与漂浮感。
+[风格前缀] Vision3 250D 日光负片观感，2.39:1 变形宽银幕（水平微弱蓝光斑），180 度快门真实物理速度，绝无慢动作与漂浮感。
 1. 场景背景：共 20 段第 1 段，30 秒，5 个镜头干脆硬切。烈日威尼斯圣马可免税拱廊（日景），东欧女押运员伊莲娜护送《1960 年尼斯空气》穿过拱廊，远景吧台侍者与迎面走来的克洛伊构成伏笔。
 2. 参考素材：@char_elena_video_v1（视频卡锁定外观与冷峻音色；重磅象牙白真丝长裙、翠绿腰带、10cm 金高跟、左耳透明耳机）；@prop_klein_cube（20cm 哑光 #002FA7 底座 + 透明玻璃罩 + 纯空透明空气 + 绿灯 SEAL INTACT）；@loc_venice_arcade_v1（白大理石柱、横幅 DUTY-FREE BIENNALE、右上方单一烈日斜射；不沿用参考图构图）。
 3. 空间与首帧：第 1 帧为空旷的圣马可白石拱廊地面（14mm / 114° FOV 极低仰拍），柱影向左前方拉长；路人退至 5 米外立柱阴影下。
@@ -271,7 +240,7 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 02｜致命生蚝滑落、一字马滑铲撞鞋盒与蓝方块破封（`30s · 6 镜硬切` · 原 S03–S06_v2）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实物理速度，碰撞瞬间带短暂定向动态模糊，随后定格在清晰接触姿态，严禁任何慢动作！
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，180 度快门真实物理速度，碰撞瞬间带短暂定向动态模糊，随后定格在清晰接触姿态，严禁任何慢动作！
 1. 场景背景：第 2 段，30 秒，圣马可免税拱廊（日景），6 个镜头硬切。生蚝滑落，伊莲娜 10cm 细高跟 0.25 秒踩碎生蚝失控一字马滑铲，把克洛伊连人带黄鞋盒撞飞，飞鞋踢裂蓝方块玻璃罩泄出一缕 1960 白雾。
 2. 参考素材：@char_elena_video_v1（象牙白真丝长裙、翠绿腰带、10cm 金高跟）；@char_chloe_image_v2（粉短发、荧光黄墨镜、黄短针织+粉白格纹工装夹克长裤、白色厚底老爹鞋、怀抱明黄 LOOP LAB 鞋盒）；@prop_klein_cube；@loc_venice_arcade_v1。
 3. 空间与轴线：单一右上方烈日。伊莲娜自左向右横向滑铲（1v1 错峰撞击），克洛伊从右侧迎面走来，4 米内无路人。
@@ -291,13 +260,13 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 03｜芭比粉礼盒雨顺手牵羊 & 女武神起身通联（`28s · 4 镜硬切` · 原 S07–S08）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实物理速度。
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，180 度快门真实物理速度。
 1. 场景背景：第 3 段，28 秒，圣马可拱廊精品店出口与大理石地面（日景），4 个镜头硬切。瓦伦蒂娜在礼盒雨中接住蓝方块，伊莲娜起身弹壳，克洛伊单脚蹦跳追喊五百万加密币，伊莲娜耳机下令五分钟追回。
-2. 参考素材：@char_valentina_image_v1（齐下巴黑波波头、高光泽芭比粉漆皮风衣、粉猫眼墨镜、敞开的粉鳄鱼皮包）；@char_elena_video_v1；@char_chloe_image_v2（粉白格纹、左脚仅穿白袜、右手高举右脚白球鞋）；@prop_klein_cube；@loc_venice_arcade_v1。
+2. 参考素材：@char_valentina_image_v1（齐下巴黑波波头、高光泽芭比粉漆皮风衣、粉猫眼墨镜、敞开的粉鳄鱼皮包）；@char_elena_video_v1；@char_chloe_image_v2（粉白格纹、左脚仅穿白袜、右手高举失落的左脚白球鞋）；@prop_klein_cube；@loc_venice_arcade_v1。
 3. 光学与逐秒动作：
 - 0.0–6.0s（镜头 1，18mm / 100° FOV 高饱和广角）：精品店门口落下粉白礼盒雨，@char_valentina_image_v1 踩高跟走出，天上坠落的 @prop_klein_cube 不偏不倚“咚”地砸进她胸前敞开的粉鳄鱼皮包（包身受 3kg 重力下沉变形）。硬切。
 - 6.0–12.0s（镜头 2，50mm / 47° FOV 瓦伦蒂娜近景）：瓦伦蒂娜单指推下粉墨镜半寸，窥见包里克莱因蓝底座，嘴角冷笑勾起，“啪”地扣上包扣，开口道：“God truly adores tax evaders.”，随即转身快步走向窄巷。硬切。
-- 12.0–20.5s（镜头 3，35mm / 63° FOV 低机位跟拍）：@char_elena_video_v1 单手撑地优雅一跃起身，抬左脚从 10cm 金高跟尖弹掉一片碎蚝壳；后方 @char_chloe_image_v2 单脚蹦跳冲上来，挥舞右脚老爹鞋大喊：“My left sneaker! Five million in crypto is in that sole!”（伊莲娜背对镜头保持闭嘴）。硬切。
+- 12.0–20.5s（镜头 3，35mm / 63° FOV 低机位跟拍）：@char_elena_video_v1 单手撑地优雅一跃起身，抬左脚从 10cm 金高跟尖弹掉一片碎蚝壳；后方 @char_chloe_image_v2 单脚蹦跳冲上来，挥舞失落的左脚老爹鞋大喊：“My left sneaker! Five million in crypto is in that sole!”（伊莲娜背对镜头保持闭嘴）。硬切。
 - 20.5–28.0s（镜头 4，85mm / 28° FOV 伊莲娜侧脸推近）：伊莲娜无视克洛伊，左手食指按住左耳透明耳机，眼神锁定远去粉色身影（自然眨眼，绝不呆滞），双唇柔和闭合静止（绝不张嘴），画外音耳机传出冷声：“Heinrich, give me five minutes.”。
 4. 物理与画质：瓦伦蒂娜漆皮风衣必须呈现高光泽折痕反光与真实皮肤毛孔；包口扣合后严丝合缝。
 5. 音频（无旁白无音乐）：[音效] 4.2s 重物落包闷响；10.5s 金属包扣“啪嗒”；14.0s 指甲弹蚝壳轻响。[对白] 8.5–10.3s Valentina；15.8–19.8s Chloé；24.0–26.8s Elena（仅画外耳机人声，画面嘴唇闭合不动）。
@@ -309,12 +278,12 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 04｜窄巷三方起跑、记者逆流举镜与高架桥坠坞（`30s · 5 镜硬切` · 原 S09–S11）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，35mm 胶片颗粒，180 度快门真实速度。
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，35mm 胶片颗粒，180 度快门真实速度。
 1. 场景背景：第 4 段，30 秒，威尼斯石灰岩窄巷至俯瞰干船坞高架桥（日景），5 个镜头硬切。伊莲娜与克洛伊追击瓦伦蒂娜，玛格特逆流举徕卡 M3 贴脸爆闪，瓦伦蒂娜受惊脱手，蓝方块坠向红蓝干船坞。
-2. 参考素材：@char_valentina_image_v1；@char_elena_video_v1；@char_chloe_image_v2；@char_margaux_image_v1（棕色软呢帽、格纹粗花呢西装、银黑徕卡 M3 配圆形闪光灯、鲑鱼粉《金融时报》）；@prop_klein_cube。
+2. 参考素材：@char_valentina_image_v1；@char_elena_video_v1；@char_chloe_image_v2；@char_margaux_image_v1（棕色软呢帽、格纹粗花呢西装、银黑徕卡 M3 配圆形闪光灯、鲑鱼粉《THE VENICE LEDGER》）；@prop_klein_cube。
 3. 光学与逐秒动作：
 - 0.0–6.0s（镜头 1，85mm / 28° FOV 长焦压缩窄巷）：瓦伦蒂娜抱粉包疾走；伊莲娜穿象牙白长裙大步高速逼近，克洛伊单脚跨过露天咖啡椅紧追。硬切。
-- 6.0–13.0s（镜头 2，35mm / 63° FOV 倾斜 12° 逆流）：阴影金融街口，@char_margaux_image_v1 顶着狂风逆西装人群大步走来，风将《FINANCIAL TIMES》大报和白鸽吹满半空；玛格特发现粉色风衣，双手举起徕卡 M3 锁定对焦。硬切。
+- 6.0–13.0s（镜头 2，35mm / 63° FOV 倾斜 12° 逆流）：阴影金融街口，@char_margaux_image_v1 顶着狂风逆西装人群大步走来，风将《THE VENICE LEDGER》大报和白鸽吹满半空；玛格特发现粉色风衣，双手举起徕卡 M3 锁定对焦。硬切。
 - 13.0–18.5s（镜头 3，50mm / 47° FOV 贴脸强闪冲击）：高架桥铁栏旁，玛格特贴近瓦伦蒂娜半米按下圆形闪光灯——刺眼白光爆闪（不超过 0.3s）直击粉墨镜，白鸽惊飞掠过镜头。硬切。
 - 18.5–24.0s（镜头 4，50mm / 47° FOV 失手瞬间）：瓦伦蒂娜受惊后仰撞在铁栏杆上，惊呼：“Che cazzo—!”（仅她动嘴），粉鳄鱼皮包扣震开，约 3kg 重 @prop_klein_cube 翻出包口越过栏杆。硬切。
 - 24.0–30.0s（镜头 5，24mm / 84° FOV 高架桥俯冲追踪）：镜头随蓝方块从铁栏垂直下坠，下方红锈油罐与纯蓝天空交界的“SECTOR 04”干船坞全景急速放大，伊莲娜冲至栏杆边俯视，眼神冷峻自然眨眼。
@@ -329,7 +298,7 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 05｜红蓝撞色废土接球 & 购物车狂飙 POV（`30s · 4 镜硬切` · 原 S12–S13）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实物理速度，无慢动作。
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，180 度快门真实物理速度，无慢动作。
 1. 场景背景：第 5 段，30 秒，SECTOR 04 红锈油罐干船坞（烈日正午），4 个镜头硬切。金克丝推着生锈购物车横移接住天降蓝方块，随后以购物车颠簸第一视角冲入红集装箱迷宫。
 2. 参考素材：@char_jinx_image_v1（黄铜护目镜、2 米长 #002FA7 克莱因蓝脏辫、废土红黑短裙、气动弹簧高跷靴、蓬松白贵宾犬）；@prop_klein_cube；@loc_red_drydock_v1（巨型红锈油罐“SECTOR 04 - RESTRICTED”、纯正蓝天、顶光右上方打下）。
 3. 光学与逐秒动作：
@@ -346,7 +315,7 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 06｜天桥跃下真丝战损 & 集装箱 1v2 错峰腾空反击（`28s · 5 镜硬切` · 原 S14–S15 升级 `Combat Skill`）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实物理打击，带短暂定向动态模糊与清晰接触姿态，无慢动作。
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，180 度快门真实物理打击，带短暂定向动态模糊与清晰接触姿态，无慢动作。
 1. 场景背景：第 6 段，28 秒，干船坞铁楼梯与红集装箱窄巷（日景），5 个镜头硬切。伊莲娜跃下撕裂真丝长裙骑上滑板车；瓦伦蒂娜与单脚克洛伊堵住红巷前口，金克丝借集装箱墙面蹬跳腾空，用管钳 0.25 秒横扫逼退瓦伦蒂娜，同时视线转靶撞飞克洛伊手中空鞋盒冲出包围。
 2. 参考素材：@char_elena_video_v1；@char_valentina_image_v1；@char_chloe_image_v2；@char_jinx_image_v1（+ 管钳 + 购物车 + 白贵宾犬）；@loc_red_drydock_v1。
 3. 光学与逐秒动作（Combat Skill 拆解一对二为连续 1v1 错峰交手）：
@@ -356,7 +325,7 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 - 17.5–22.5s（镜头 4，85mm / 28° FOV Match-cut 眼神转靶与撞击）：金克丝在半空脚尖未落地前视线已提前死锁左侧扑来的克洛伊胸口（眼神专注自然眨眼），落地瞬间反手推着购物车铁框 0.25 秒直线撞飞克洛伊怀里的空黄鞋盒，鞋盒受重击变形飞散。硬切。
 - 22.5–28.0s（镜头 5，35mm / 63° FOV 突围）：金克丝顺势推车带白贵宾犬冲进纵深红巷，留下气急败坏爬起的瓦伦蒂娜与克洛伊。
 4. 画质与音频（无旁白无音乐）：接触形变与汗珠/尘土飞扬清晰，零肢体融合。[音效] 4.5s 撕丝绸“RRRIP！”；5.8s 电机啸叫；15.2s 管钳破空“WHOOSH！”；19.5s 铁框撞飞纸盒闷响。[对白] 8.5–11.8s Chloé（其余人动作间保持闭嘴咬牙）。
-5. 正面约束：1v1 错峰交手同一瞬间只有 1 名对手触及金克丝；伊莲娜全片此后保持高开衩战损白丝裙。
+5. 正面约束：1v1 错峰交手同一瞬间只有 1 名对手触及金克丝；伊莲娜在 Act II–IV 期间保持高开衩战损白丝裙（直至 Block 19 次日清晨换装）。
 ```
 
 ---
@@ -364,7 +333,7 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 07｜红蓝迷宫横移长镜、Whip-pan 接伊莲娜 1v1 踢腕夺位（`30s · 4 镜硬切` · 原 S16_v2–S17 升级 `Combat Skill`）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实速度，Whip-pan 藏接缝。
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，180 度快门真实速度，Whip-pan 藏接缝。
 1. 场景背景：第 7 段，30 秒，红锈集装箱交错长廊（日景），4 个镜头硬切。14 秒四方错峰横移长镜头，甩镜（Whip-pan）衔接金克丝弹簧靴跃黑机油坑磕歪车轮，伊莲娜滑板车贴身截击，10cm 金高跟 0.25 秒精准点踢金克丝持钳手腕。
 2. 参考素材：@char_jinx_image_v1（+ 管钳 + 白贵宾犬）；@char_elena_video_v1（高开衩裙 + 滑板车）；@char_valentina_image_v1；@char_chloe_image_v2；@loc_red_drydock_v1。
 3. 光学与逐秒动作：
@@ -384,11 +353,11 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 08｜高处狗仔连拍、滑板车截停与管钳磕歪激光 15°（`28s · 5 镜硬切` · 原 S18–S21）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实物理碰撞，无慢动作。
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，180 度快门真实物理碰撞，无慢动作。
 1. 场景背景：第 8 段，28 秒，干船坞高架猫道与铁轨窄巷（下午斜阳），5 个镜头硬切。玛格特猫道连拍低语；伊莲娜滑板车甩尾踢木托盘截停，购物车侧翻，金克丝扑救蓝方块时管钳反作用力 0.25 秒磕歪右前红激光 15 度。
 2. 参考素材：@char_margaux_image_v1；@char_elena_video_v1；@char_jinx_image_v1；@prop_klein_cube；@loc_red_drydock_v1。
 3. 光学与逐秒动作：
-- 0.0–6.5s（镜头 1，85mm / 28° FOV 猫道望远偷拍）：玛格特趴在锈栏杆上拨动徕卡 M3 连拍下方交锋，凑近录音笔低语：“Sotheby's fixer chasing a squatters' cart... Pulitzer material.”。硬切。
+- 0.0–6.5s（镜头 1，85mm / 28° FOV 猫道望远偷拍）：玛格特趴在锈栏杆上拨动徕卡 M3 连拍下方交锋，凑近录音笔低语：“Vespera fixer chasing a squatters' cart... Pulitzer material.”。硬切。
 - 6.5–12.5s（镜头 2，35mm / 63° FOV 贴地跟拍）：红巷中伊莲娜滑板车甩尾超越，金高跟侧踢一块“FRAGILE”木托盘横挡去路；金克丝歪斜的车轮一头卡死地面嵌入铁轨。硬切。
 - 12.5–18.5s（镜头 3，50mm / 47° FOV 真实速度侧翻）：生锈购物车猛烈侧翻，废铁齿轮四散；金克丝扑上前在离地十厘米处双手死死接住约 3kg 重 @prop_klein_cube（手臂肌肉因承重紧绷）。硬切。
 - 18.5–22.0s（镜头 4，85mm / 28° FOV 碰撞插入特写 Match-cut）：金克丝右腕一抖，重型钢丝管钳因惯性在 0.25 秒内“当！”地狠狠磕在蓝方块底座右前角，留下黑油污与细微金属擦痕。硬切。
@@ -446,8 +415,8 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 1. 场景背景：第 11 段，30 秒，黄昏死胡同手术台（@loc_red_tanks_alley_v1），5 个镜头硬切。克洛伊挤入韩国海盐薯片氮气，金克丝剪蓝脏辫碾粉遮油污并开启微焊枪校准红激光，焊枪却在激光还差 2 毫米时没气熄火。
 2. 参考素材：@char_chloe_image_v2（持揉皱“SEA SALT CRISPS”银箔薯片袋）；@char_jinx_image_v1（拉下黄铜护目镜、握剪线钳与微焊枪）；@char_elena_video_v1；@prop_klein_cube。
 3. 光学与逐秒动作：
-- 0.0–9.5s（镜头 1，50mm / 47° FOV 克洛伊近景）：克洛伊抖净银箔薯片袋碎渣，将袋口塞进蓝方块玻璃罩微缝挤压注入氮气，“咔哒”锁死卡扣，得意道：“Artisanal sea-salt nitrogen. Zero trans fat.”。硬切。
-- 9.5–17.5s（镜头 2，85mm / 28° FOV 极近微距）：金克丝用钢丝钳剪下一小撮刚染的克莱因蓝脏辫，在戴手套的掌心碾成蓝粉，细细涂抹盖住底座黑油污，哑光 #002FA7 表面恢复无瑕，她炫耀道：“Berlin industrial cobalt No. 4. Identical hex code.”。硬切。
+- 0.0–9.5s（镜头 1，50mm / 47° FOV 克洛伊近景）：克洛伊抖动银箔薯片袋（袋内微量海盐调味粉与淀粉微尘随气流沾到玻璃罩内缘），将袋口塞进微缝挤压注入氮气，“咔哒”锁死卡扣，得意道：“Artisanal sea-salt nitrogen. Zero trans fat.”。硬切。
+- 9.5–17.5s（镜头 2，85mm / 28° FOV 极近微距）：金克丝用钢丝钳剪下一小撮刚染的克莱因蓝脏辫，在戴手套的掌心碾成蓝粉，细细涂抹盖住底座黑油污（手套与底座边缘留有极微量蓝染料粉末残留），哑光 #002FA7 表面恢复近似原色，她炫耀道：“Berlin industrial cobalt-blue dye No. 4. Identical hex code.”。硬切。
 - 17.5–25.0s（镜头 3/4，21.5s 切 85mm / 28° FOV 激光特写）：金克丝拉下护目镜点燃微焊枪抵近底座右前角，橙色焊花四溅（21.5s 切激光特写），原本歪 15° 的细红激光慢慢被掰回垂直。硬切。
 - 25.0–30.0s（镜头 5，50mm / 47° FOV 熄火瞬间）：焊枪“噗”一声断气熄灭，激光停在**越位偏斜 2 毫米**处不动，金克丝拉起护目镜惊呼：“Torch is out! Still two millimeters off!”。
 4. 画质与音频（无旁白无音乐）：铝箔褶皱、脏辫粉末与焊花质感锐利。[音效] 4.5s 铝箔挤压+7.5s 卡扣锁死；10.5s 剪发“咔嚓”；18.5–24.5s 焊枪喷火与火花；25.2s 断气“噗哧”。[对白] 5.0–8.8s Chloé；13.5–17.0s Jinx；26.5–29.5s Jinx。
@@ -490,14 +459,14 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 
 ---
 
-#### Block 14｜买家怀表 00:15、机械黑鸦苏醒与哥特祭坛全景建立（`26s · 4 镜硬切` · 原 S36–S38）
+#### Block 14｜买家怀表 00:39、机械黑鸦苏醒与哥特祭坛全景建立（`26s · 4 镜硬切` · 原 S36–S38）
 
 ```text
 [风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，暗部细节保留不死黑，180 度快门。
-1. 场景背景：第 14 段，26 秒，地下五层黑红白哥特棋盘祭坛（@loc_gothic_bunker_v1），4 个镜头硬切。伦敦买家合上 00:15 怀表，机械黑鸦红眼苏醒，冷白单顶光全景建立，伊莲娜步入。
+1. 场景背景：第 14 段，26 秒，地下五层黑红白哥特棋盘祭坛（@loc_gothic_bunker_v1），4 个镜头硬切。伦敦买家合上 00:39 银怀表，机械黑鸦红眼苏醒，冷白单顶光全景建立，伊莲娜步入。
 2. 参考素材：@char_tribunal_image_v1（严格仅限 2 名男性 + 1 只仿生黑鸦：老钱买家戴黑羊皮手套与金丝圆眼镜、海因里希额角冒冷汗、机械黑鸦）；@char_elena_video_v1；@loc_gothic_bunker_v1（黑枯木岩壁、10 米深红天鹅绒幕布、双白鹿头骨、发光水晶棋盘正中白皇后空槽；唯一冷白正顶聚光灯）。
 3. 光学与逐秒动作：
-- 0.0–9.0s（镜头 1，85mm / 28° FOV 明暗近景）：黑羊皮手套“啪”地合上显示“00:15”的银怀表；镜头微抬，仅见买家冷峻侧脸与身后冷汗直流的海因里希（严格 2 名男性），买家开口（仅他动嘴）：“Twelve seconds. Punctuality is half the provenance.”，随即两人转头望向入口。硬切。
+- 0.0–9.0s（镜头 1，85mm / 28° FOV 明暗近景）：黑羊皮手套“啪”地合上显示“00:39”的银怀表；镜头微抬，仅见买家冷峻侧脸与身后冷汗直流的海因里希（严格 2 名男性），买家开口（仅他动嘴）：“Thirty-nine seconds. Let us see if Geneva's reputation survives the stairs.”，随即两人转头望向入口。硬切。
 - 9.0–15.5s（镜头 2，85mm / 28° FOV 棋盘边缘微距）：黑暗中发光水晶棋盘边缘蹲着碳纤维仿生黑鸦，红光眼“嗡”地苏醒对焦，金属乌喙微张。硬切。
 - 15.5–17.5s（镜头 3，24mm / 84° FOV 对称大师全景——首秒勘景）：唯一冷白正顶聚光灯直照中央发光水晶棋盘，四周黑枯木岩壁与 10 米深红天鹅绒幕布保留肌理，两座白鹿头骨对称矗立，地面红激光纵横。
 - 17.5–26.0s（镜头 3 延续）：@char_elena_video_v1 从左侧深影拎蓝袋从容步入顶光边缘，海因里希与买家在右侧阴影静候。
@@ -519,7 +488,7 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 - 0.0–8.5s（镜头 1，28mm / 75° FOV 贴地滑轨）：10cm 金高跟精准踩在两条致命红激光缝隙上，镜头升起至白鹿头骨旁，伊莲娜将蓝袋放在棋盘边。硬切。
 - 8.5–17.5s（镜头 2，35mm / 63° FOV 90° 垂直顶拍）：伊莲娜双手捧出 @prop_klein_cube（6cm 白鸽羽悄悄留在旁边蓝袋口），垂直嵌入正中“白皇后”凹槽；四束微米红激光射向黑暗，框出全透明空气。硬切。
 - 17.5–23.5s（镜头 3，85mm / 28° FOV 黑鸦微距）：黑鸦跳上棋盘边缘，伸出银色嗅觉探针刺入空虚空；肉眼可见右前红激光向右微偏 2 毫米。硬切。
-- 23.5–27.0s（镜头 4，50mm / 47° FOV 悬浮全息屏）：半空全息光谱界面绿波炸成猩红锯齿，报错文字闪烁，买家与海因里希在虚焦后景一震。
+- 23.5–27.0s（镜头 4，50mm / 47° FOV 悬浮全息屏）：半空全息光谱界面绿波炸成猩红锯齿，清晰显示 `TRACE STARCH: DETECTED / BLUE DYE RESIDUE: DETECTED / LASER OFFSET: +2.0 mm`，买家与海因里希在虚焦后景一震。
 4. 画质与音频（无旁白无音乐）：水晶折射与金属探针细节锐利。[音效] 0–8s 激光嗡鸣与高跟落步；14.0s 磁吸重响“KA-WHUMMM！”；20.5s 探针伸出；24.0s 红警“BEEP-BEEP-BEEP”。
 5. 正面约束：蓝方块内 100% 透明空空气（无冰块无晶体）；全息屏报错文字清晰无乱码。
 ```
@@ -533,9 +502,9 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 1. 场景背景：第 16 段，30 秒，地下五层哥特棋盘祭坛（@loc_gothic_bunker_v1），3 个镜头硬切。买家捏着红警全息屏叫停汇款质询淀粉、染发粉和 2mm 偏移，伊莲娜在冷白顶光下用牛津腔抛出“1960 年克莱因就在尼斯炸薯条酒馆旁封存此作”的开篇反杀。
 2. 参考素材：@char_tribunal_image_v1（仅限老钱买家 + 海因里希 2 名男性）；@char_elena_video_v1（冷峻牛津腔音色锁定）；@loc_gothic_bunker_v1（单一冷白正顶聚光灯）。
 3. 光学、第一轴线与逐秒动作：
-- 0.0–12.0s（镜头 1，50mm / 47° FOV 第一轴线双人反打，买家在右、海因里希在后）：买家黑手套拇指摩挲红警平板边缘（手不离物），半摘金丝眼镜眯眼盯向左侧伊莲娜；海因里希面如死灰僵立；买家冷静质问：“Hold the wire. Why does 1960 Nice harbor air contain potato starch, hair dye, and a two-millimeter laser drift?”（海因里希闭嘴发颤）。硬切。
+- 0.0–12.0s（镜头 1，50mm / 47° FOV 第一轴线双人反打，买家在右、海因里希在后）：买家黑手套拇指摩挲红警平板边缘（手不离物），半摘金丝眼镜眯眼盯向左侧伊莲娜；海因里希面如死灰僵立；买家冷静质问：“Twelve seconds. Hold the wire. Why does 1960 Nice harbor air contain potato-starch traces, blue dye residue, and a two-millimeter laser offset?”（海因里希闭嘴发颤）。硬切。
 - 12.0–16.0s（镜头 2，50mm / 47° FOV 棋盘与伊莲娜反应）：伊莲娜半边面孔隐在可读深影里，眼神如钢钉死锁买家眉心（自然眨眼一次，绝不呆滞），右手食指与中指轻轻搭上发光水晶棋盘边缘。硬切。
-- 16.0–30.0s（镜头 3，85mm / 28° FOV 缓慢稳推轨特写）：伊莲娜下颌微抬半英寸，面无一丝慌乱，在说到“frites tavern”时指尖轻敲水晶桌面“哒”，一气呵成念出前半句：“In 1960, Yves Klein sealed this void next to a dockside frites tavern. Sixty years of geomagnetic drift bends Lorentz fields by 2.1 millimeters.”，保持冷漠微停顿。
+- 16.0–30.0s（镜头 3，85mm / 28° FOV 缓慢稳推轨特写）：伊莲娜下颌微抬半英寸，面无一丝慌乱，在说到“frites tavern”时指尖轻敲水晶桌面“哒”，一气呵成念出前半句：“In 1960, Yves Klein sealed this void next to a dockside frites tavern. Sixty years of geomagnetic drift bends Lorentz fields by 2.0 millimeters.”，保持冷漠微停顿。
 4. 画质与音频（无旁白无音乐）：皮肤毛孔、眼波微动、真丝肩带随呼吸起伏清晰。[环境音] 低频电流底噪。[音效] 23.8s 指甲敲水晶“哒”。[对白] 1.5–11.5s Buyer；16.5–29.5s Elena（牛津腔口型精准同步）。
 5. 正面约束：仅限 2 名男性 + 1 名女性；唯一冷白正顶聚光灯；无背景配乐。
 ```
@@ -554,25 +523,25 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 - 11.5–14.5s（镜头 3，40mm / 57° FOV 遮挡换轴线）：镜头贴黑曜石桌面平稳横移，掠过机械黑鸦立起的黑曜石侧翼完成短暂全屏遮挡（12.5–13.3s），无缝切入居中 180° 第二对称轴线！
 - 14.5–22.5s（镜头 4，40mm / 57° FOV 对称居中大师镜头）：6cm 纯白鸽子羽毛飘进 @prop_klein_cube 上方 4 根红激光框住的纯透明虚空正中心，受静电与微流托举，第 19.0s 彻底悬停于几何正中心，细小绒毛极轻颤动（内部 100% 空虚空，绝无冰块或晶体！）。硬切。
 - 22.5–28.0s（镜头 5，85mm / 28° FOV 圣洁特写）：冷白手术顶光直射悬停白羽，在黑曜石与深红天鹅绒背景下发出柔白微光。
-4. 画质与音频（无旁白无音乐）：羽毛绒毛丝缕分明。[音效] 7.5s 通风管微风。[动作音效] 19.0s 起一声极轻、空灵的圣咏单音女子轻哼余韵（仅 3 秒环境混响，非背景配乐）。[对白] 0.5–6.0s Elena。
+4. 画质与音频（无旁白无音乐）：羽毛绒毛丝缕分明。[音效] 7.5s 通风管微风。[动作音效] 19.0s 起通风口百叶极轻金属震颤与玻璃罩微弱静电嗡鸣（纯物理声学共鸣，绝无任何配乐或人声）。[对白] 0.5–6.0s Elena。
 5. 正面约束：蓝方块内除 1 根 6cm 白鸽羽外空无一物（严禁冰块或发光水晶）；镜头 4/5 无人遮挡中心。
 ```
 
 ---
 
-#### Block 18｜全息屏 `0.000g` 绿灯、老钱买家摘镜放款 8000 万欧 & 转身退场（`28s · 4 镜硬切` · 原 S46–S48）
+#### Block 18｜全息屏 `0.000 g` 绿灯、老钱买家摘镜放款 8000 万欧 & 转身退场（`28s · 4 镜硬切` · 原 S46–S48）
 
 ```text
 [风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实质感。
-1. 场景背景：第 18 段，28 秒，地下五层哥特棋盘祭坛（@loc_gothic_bunker_v1），4 个镜头硬切。白羽倒影掠过黑鸦红眼，全息屏翻绿 `MASS DELTA: 0.000g`，老钱买家震颤摘镜释放八千万欧元，伊莲娜拎起空蓝袋转身步入黑暗。
+1. 场景背景：第 18 段，28 秒，地下五层哥特棋盘祭坛（@loc_gothic_bunker_v1），4 个镜头硬切。白羽倒影掠过黑鸦红眼，全息屏翻绿 `VERTICAL ACCELERATION: 0.000 g`，老钱买家震颤摘镜释放八千万欧元，伊莲娜拎起空蓝袋转身步入黑暗。
 2. 参考素材：@char_tribunal_image_v1（买家 + 海因里希 + 黑鸦）；@char_elena_video_v1；@loc_gothic_bunker_v1。
 3. 光学与逐秒动作：
-- 0.0–7.5s（镜头 1，85mm / 28° FOV 黑鸦与全息屏特写）：白羽柔影掠过黑鸦红眼，全息屏瞬间由红转亮翠绿，清晰显示：`MASS DELTA: 0.000g / AUTHENTICITY: 99.9% VERIFIED`；地面所有红激光“嗡”地同步转成冷白。硬切。
-- 7.5–18.0s（镜头 2，50mm / 47° FOV 伦敦买家近景）：买家瞳孔倒映白羽光芒，黑手套双手微颤摘下金丝圆眼镜，按下加密卫星令牌绿色确认键，朝伊莲娜微俯首敬畏低语：“Zero-gravity conceptual levitation... Magnificent. Eighty million euros released.”（后景海因里希长舒一口气）。硬切。
+- 0.0–7.5s（镜头 1，85mm / 28° FOV 黑鸦与全息屏特写）：白羽柔影掠过黑鸦红眼，全息屏瞬间由红转亮翠绿，清晰显示：`VERTICAL ACCELERATION: 0.000 g (WITHIN DISPLAY RESOLUTION) / LEVITATION EVENT: VERIFIED`；地面所有红激光“嗡”地同步转成冷白。硬切。
+- 7.5–18.0s（镜头 2，50mm / 47° FOV 伦敦买家近景）：买家瞳孔倒映白羽光芒，黑手套双手微颤摘下金丝圆眼镜，按下加密卫星令牌绿色确认键，朝伊莲娜微俯首敬畏低语：“Suspended in the void... Magnificent. Eighty million euros released.”（后景海因里希长舒一口气）。硬切。
 - 18.0–24.0s（镜头 3，50mm / 47° FOV 伊莲娜近景）：伊莲娜眼神毫无波澜，弯腰拎起空了的克莱因蓝纸袋，淡淡道：“Pleasure doing business.”。硬切。
 - 24.0–28.0s（镜头 4，35mm / 63° FOV 背影长廊）：伊莲娜背对八千万欧元踩 10cm 金高跟笔直走入电梯走廊黑暗。
 4. 画质与音频（无旁白无音乐）：皮肤微颤与眼镜反光真实。[音效] 2.5s 翠绿水晶提示音“DINGGGG”；3.5s 激光转白稳压声；12.5s 卫星令牌轻滴；25.0s 高跟鞋声渐远。[对白] 13.0–17.6s Buyer；20.5–22.5s Elena。
-5. 正面约束：全息屏文字清晰为 `MASS DELTA: 0.000g` 与 `99.9% VERIFIED`；严格 2 男 1 女 1 鸦。
+5. 正面约束：全息屏文字清晰为 `VERTICAL ACCELERATION: 0.000 g (WITHIN DISPLAY RESOLUTION)` 与 `LEVITATION EVENT: VERIFIED`；严格 2 男 1 女 1 鸦。
 ```
 
 ---
@@ -582,12 +551,12 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 #### Block 19｜船坞撒钱狂欢、FT 头版大乌龙 & 免税大道三人换装并肩（`26s · 4 镜硬切` · 原 S49–S51）
 
 ```text
-[风格前缀] Kodak Vision3 500T 变形宽银幕 2.39:1，180 度快门真实质感。
-1. 场景背景：第 19 段，26 秒，从夕阳红蓝干船坞切至次日清晨现代混凝土免税大道（日景），4 个镜头硬切。金克丝与克洛伊船坞撒钱喷香槟，《金融时报》头版大乌龙，次日清晨伊莲娜、瓦伦蒂娜、克洛伊换装并肩迈出旋转门，耳机里海因里希崩溃追问。
+[风格前缀] Vision3 250D 日光观感，变形宽银幕 2.39:1，180 度快门真实质感。
+1. 场景背景：第 19 段，26 秒，从夕阳红蓝干船坞切至次日清晨现代混凝土免税大道（日景），4 个镜头硬切。金克丝与克洛伊船坞撒钱喷香槟，《THE VENICE LEDGER》头版大乌龙，次日清晨伊莲娜、瓦伦蒂娜、克洛伊换装并肩迈出旋转门，耳机里海因里希崩溃追问。
 2. 参考素材：@char_jinx_image_v1（+ 戴粉墨镜的白贵宾犬）；@char_chloe_image_v2；@char_elena_video_v1（换装为宽松象牙白高定西装套装，左耳透明耳机）；@char_valentina_image_v1（换装为宽松克莱因蓝长风衣）；@loc_taxfree_zone_v1。
 3. 光学与逐秒动作：
 - 0.0–8.5s（镜头 1，35mm / 63° FOV 船坞夕阳中景）：金克丝坐在修好的购物车顶向蓝天抛撒欧元纸币，白贵宾犬戴着瓦伦蒂娜的芭比粉墨镜开心汪叫，克洛伊拧开香槟喷出漫天泡沫。硬切。
-- 8.5–15.0s（镜头 2，85mm / 28° FOV 报摊石板推镜）：一捆鲑鱼粉《FINANCIAL TIMES》甩在威尼斯石板地上，镜头推近头版黑白照（玛格特拍下的伊莲娜跃过干船坞、群鸽乱飞），粗黑标题清晰：“HEIRESS STAGES RADICAL PARKOUR PROTEST AGAINST ART FINANCE”。硬切。
+- 8.5–15.0s（镜头 2，85mm / 28° FOV 报摊石板推镜）：一捆鲑鱼粉《THE VENICE LEDGER》甩在威尼斯石板地上，镜头推近头版黑白照（玛格特拍下的伊莲娜跃过干船坞、群鸽乱飞），粗黑标题清晰：“HEIRESS STAGES RADICAL PARKOUR PROTEST AGAINST ART FINANCE”。硬切。
 - 15.0–26.0s（镜头 3/4，35mm / 63° FOV 免税大道跟拍）：现代旋转玻璃门转出——换上象牙白西装的伊莲娜稳步走出；穿克莱因蓝大衣的瓦伦蒂娜与粉白格纹的克洛伊丝滑并入左右同步前行；伊莲娜轻触耳机，双唇紧闭静止（绝不张嘴），耳机传出海因里希崩溃质问。
 4. 画质与音频（无旁白无音乐）：新闻纸纤维、香槟泡沫与高定西装垂坠质感清晰。[音效] 6.5s 香槟“POP！”；9.0s 报纸砸地；18.0s 整齐脚步。[对白] 20.5–25.5s 仅耳机画外音 Heinrich 崩溃嘶喊（画面三人全部闭嘴前行）: {Elena! Geneva HQ is losing their minds—how did you engineer feather levitation?!}。
 5. 正面约束：白贵宾犬戴粉墨镜；头版标题无乱码；第 15–26s 三位主角已换装且全程闭嘴。
@@ -595,17 +564,17 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 
 ---
 
-#### Block 20｜90° 侧影尺规行进、3D 坍缩 2D 丝网版画定格 & 克莱因蓝纯色擦除（`26s · 3 镜硬切` · 原 S52–S54）
+#### Block 20｜90° 侧影尺规行进、3D 坍缩 2D 丝网版画定格切黑（接 Card 10）（`26s · 3 镜硬切` · 原 S52–S54）
 
 ```text
-[风格前缀] Kodak Vision3 500T 实拍质感向 12fps 现代时尚杂志 2D 粗粝 Risograph 丝网版画平滑坍缩，2.39:1 宽银幕。
-1. 场景背景：第 20 段（收官），26 秒，现代蓝色几何混凝土免税大道（@loc_taxfree_zone_v1）。伊莲娜耳机画外音报销完“六万欧 + 贝隆生蚝 + 三欧五十海盐薯片（没发票）”后，画面定格并被纯正 #002FA7 克莱因蓝扩屏吞没。
+[风格前缀] Vision3 250D 日光实拍质感向 12fps 现代时尚杂志 2D 粗粝 Risograph 丝网版画平滑坍缩，2.39:1 宽银幕。
+1. 场景背景：第 20 段（收官），26 秒，现代蓝色几何混凝土免税大道（@loc_taxfree_zone_v1）。伊莲娜耳机画外音报销完“六万欧 + 贝隆生蚝 + 三欧五十海盐薯片（没发票）”后，画面定格为 2D 丝网版画海报后干脆切黑，随即接入 Card 10 作为唯一完整纯蓝片尾卡。
 2. 参考素材：@char_elena_video_v1（象牙白西装）；@char_valentina_image_v1（克莱因蓝大衣）；@char_chloe_image_v2（粉白格纹西装）；@loc_taxfree_zone_v1（现代蓝色几何墙面标有“TAX-FREE ZONE”）。
 3. 光学与逐秒动作（90° 侧影 & 嘴唇铁律）：
 - 0.0–11.0s（镜头 1，50mm / 47° FOV 90° 正侧面横向跟拍）：三人严格保持 1.5 米等距步幅，各拎钴蓝与粉白购物袋从左向右走过“TAX-FREE ZONE”蓝色几何墙前；三人侧脸闭嘴目视前方；第 7.0s 起实拍光影扁平化为硬边色块，无缝坍缩成 2D 粗糙粉笔肌理克莱因蓝丝网版画。无缝接续。
 - 11.0–21.0s（镜头 2，12fps 2D 丝网印刷动画）：三个拉长至九头身的无脸极简剪影女郎在冷灰天空与“TAX-FREE ZONE”钴蓝方块前踩韵律步态并肩前行，购物袋边露出欧元绑带与“CRISPS”薯片袋一角；第 19.0s 骤然定格为静态丝网版画海报。硬切。
-- 21.0–26.0s（镜头 3，海报定格 → 纯蓝擦除）：海报纸张颗粒微闪 1.5 秒；第 22.5s 正中央纯粹哑光 #002FA7 国际克莱因蓝方块向四周扩散吞没全屏，第 25.2s 纯蓝满屏定格 0.8s 后干脆切黑。
-4. 画质与音频（无旁白无音乐）：2D 纸张粗粝网点颗粒与纯正 #002FA7 蓝无偏紫。[音效] 0–18s 整齐鞋跟踏步；19.0s 定格“CLICK！”；22.5s 深沉蓝音共鸣。[对白] 全程三人嘴唇闭合静止，仅画外耳机低语：
+- 21.0–26.0s（镜头 3，2D 海报定格 → 干脆切黑）：2D 丝网版画海报纸张颗粒微闪 3.5 秒，第 24.5s 至 26.0s 保持静态定格后干脆切黑（随后由 `Card 10` 承担唯一完整 `#002FA7` 纯蓝片尾卡）。
+4. 画质与音频（无旁白无音乐）：2D 纸张粗粝网点颗粒与纯正 #002FA7 蓝无偏紫。[音效] 0–18s 整齐鞋跟踏步；19.0s 定格“CLICK！”；24.5s 印刷油墨定格微响。[对白] 全程三人嘴唇闭合静止，仅画外耳机低语：
   - 2.0–9.5s Elena: {Trade secret. Approve my expense sheet: €60,000 fee, and one crushed Belon oyster.}
   - 14.0–18.8s Elena: {...Plus one bag of sea-salt crisps. Three euros fifty. No receipt.}
 5. 正面约束：三人保持 1.5m 等距 90° 侧影，绝不回头或张嘴；#002FA7 纯蓝无偏紫；第 26 秒干脆切黑。
@@ -613,8 +582,19 @@ Constraints: exactly two hands, no extra fingers, no new characters, no object d
 
 ---
 
-## 五、交付前自我审阅清单（Self-Review Gate — 终极核验通过）
+## 五、交付前核验 Gate（V3.7 实操清单）
 
-1. **质感与武戏全项达标**：已补齐开拍前 **4 维去塑料质感精修 + 视频角色卡 Prompt**；全 20 段补齐 **`Kodak Vision3 500T` 风格前缀 + 精确 FOV 度数 + 皮肤毛孔/面料反光/定向动态模糊画质模块**；Act II `Block 06–08` 已升级为真 `Combat Skill` 近身攻防（静止蓄势 → `0.25s` 直线打击 → `85mm` 接触形变 Match-cut → 腾空视线提前转靶）。
-2. **时长与节奏精准**：`Block 01–20` (`569.0s`) + `Card 01–10` (`46.0s`) = **`615.0s`（10 分 15 秒）**。
-3. **规则与伏笔闭环**：全片无 `slow-motion`，耳机暗语严格闭嘴，`@prop_klein_cube` 100% 透明空虚空，地下 2 男 1 女 1 鸦人数锁死，6 条因果伏笔全闭环。
+> 资产需逐张人工目视抽检并完成小样测试后再进入批量生成；以下为交付与投喂前的实操核验门禁：
+
+- [ ] 统一采用全画幅对角 FOV 表；不再出现 14mm/94°、18mm/84°、16mm/88° 等错配。
+- [ ] 日景/黄昏/地下场景按 250D/500T 风格分别处理，不把胶片型号当作精确生成参数。
+- [ ] 角色精修不改变身份、服装剪裁、配色与构图；不声称由 2D 提示词生成真实 3D/PBR 贴图。
+- [ ] 20 个 Master Block 已拆成独立短镜头，复杂动作拆分并有首帧/尾帧约束。
+- [ ] 激光 15° → 2mm → +2.0mm 检测状态连续。
+- [ ] 淀粉与蓝染料残留在 Block 11 有来源，在 Block 15/16/Card 09 有一致证据名称。
+- [ ] 羽毛由袋口进入空域，悬浮由气流减弱与静电效果呈现，不宣称真实零重力。
+- [ ] Block 14 怀表、Block 15 时长、Block 16 “Twelve seconds”匹配。
+- [ ] Block 20 以海报切黑结束，Card 10 是唯一完整纯蓝片尾卡。
+- [ ] 角色名统一 Margaux；Chloé 左脚鞋状态、Jinx 狗只数量、三人次日换装连续。
+- [ ] 所有 UI、字幕、新闻标题在后期排版并逐字校对。
+- [ ] 逐张检查 23 张原始资产的身份/服装/场景一致性；未完成目视检查前不得标记资产审核“通过”。

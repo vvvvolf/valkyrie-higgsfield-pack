@@ -2,24 +2,29 @@
 
 > **Public Read-Only Pack for GPT / Higgsfield** — 所有文件与图片均已开放公开 Raw 直链，无任何权限拦截。
 
-## 核心文档直链（推荐优先使用 V3 精修版）
-- **V3 专业制作精修版（含 V3.1–V3.7 摄影/质感/单镜头拆分/连续性补丁 + 20 段总控剧本）**：
-  - GitHub 预览: https://github.com/vvvvolf/valkyrie-higgsfield-pack/blob/main/V3_MASTER_SCRIPT_AND_PROMPTS.md
-  - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/V3_MASTER_SCRIPT_AND_PROMPTS.md
-- **V2 原始备份版**：
-  - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/DutyFree_Valkyrie_10m_Remaster_Script_and_Prompts.md
-- **GPT `@` 标签与图片资产映射表**：
-  - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/ASSET_INDEX_FOR_GPT.md
+## 核心文档直链（推荐按以下顺序投喂）
+1. **逐镜头原子拆分执行表（97 镜 · 每条 ≤120 词 · 可直接投喂生成，569s Blocks + 46s Cards = 615s）**：
+   - GitHub 预览: https://github.com/vvvvolf/valkyrie-higgsfield-pack/blob/main/V3_ATOMIC_SHOTS_88_EXECUTION_TABLE.md
+   - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/V3_ATOMIC_SHOTS_88_EXECUTION_TABLE.md
+2. **V3 统一总控剧本与摄影/质感规范（已将 V3.1–V3.7 补丁全部并入正文，20 Blocks + 10 Cards）**：
+   - GitHub 预览: https://github.com/vvvvolf/valkyrie-higgsfield-pack/blob/main/V3_MASTER_SCRIPT_AND_PROMPTS.md
+   - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/V3_MASTER_SCRIPT_AND_PROMPTS.md
+3. **GPT `@` 标签与图片资产映射表**：
+   - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/ASSET_INDEX_FOR_GPT.md
+4. **V2 原始备份（已归档）**：
+   - Raw 纯文本直链: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/archive/DutyFree_Valkyrie_10m_V2_Backup.md
 
-## 图片资产（`assets/`）
-共 23 张角色、道具与场景设定图：
+## 图片资产（`assets/`，共 26 张）
 - `asset_00_klein_cube.png`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/asset_00_klein_cube.png
 - `char_chloe_v2.png`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_chloe_v2.png
 - `char_elena.png`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_elena.png
 - `char_jinx.png`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_jinx.png
 - `char_margaux.png`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_margaux.png
-- `char_tribunal.png`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_tribunal.png
 - `char_valentina.png`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_valentina.png
+- `char_buyer.png` (从审判庭裁切): https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_buyer.png
+- `char_heinrich.png` (从审判庭裁切): https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_heinrich.png
+- `char_raven.png` (从审判庭裁切): https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_raven.png
+- `char_tribunal.png` (三人原始参考): https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/char_tribunal.png
 - `ref_01_elena_arch.jpg`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/ref_01_elena_arch.jpg
 - `ref_02_slide_chloe.jpg`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/ref_02_slide_chloe.jpg
 - `ref_03_midair_seal.jpg`: https://raw.githubusercontent.com/vvvvolf/valkyrie-higgsfield-pack/main/assets/ref_03_midair_seal.jpg
